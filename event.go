@@ -3,7 +3,7 @@ package checkin
 import (
 	"time"
 
-	"github.com/micromdm/checkin/internal/checkinproto"
+	"github.com/Lepidopteron/micromdm-checkin/internal/checkinproto"
 	"github.com/micromdm/mdm"
 	uuid "github.com/satori/go.uuid"
 	"google.golang.org/protobuf/proto"
