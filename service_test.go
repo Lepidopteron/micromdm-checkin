@@ -11,7 +11,6 @@ import (
 	"github.com/groob/plist"
 	"github.com/micromdm/checkin/service/mock"
 	"github.com/micromdm/mdm"
-	"golang.org/x/net/context"
 )
 
 func TestHTTPCheckin_Authenticate(t *testing.T) {
@@ -193,7 +192,6 @@ func setup(t *testing.T) client {
 		CheckinEndpoint: MakeCheckinEndpoint(svc),
 	}
 	h := MakeHTTPHandlers(
-		context.Background(),
 		e,
 		httptransport.ServerErrorEncoder(EncodeError),
 	)

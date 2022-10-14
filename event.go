@@ -3,11 +3,10 @@ package checkin
 import (
 	"time"
 
-	"github.com/gogo/protobuf/proto"
+	"github.com/micromdm/checkin/internal/checkinproto"
 	"github.com/micromdm/mdm"
 	uuid "github.com/satori/go.uuid"
-
-	"github.com/micromdm/checkin/internal/checkinproto"
+	"google.golang.org/protobuf/proto"
 )
 
 type Event struct {

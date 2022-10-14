@@ -14,10 +14,9 @@ type HTTPHandlers struct {
 	CheckinHandler http.Handler
 }
 
-func MakeHTTPHandlers(ctx context.Context, endpoints Endpoints, opts ...httptransport.ServerOption) HTTPHandlers {
+func MakeHTTPHandlers(endpoints Endpoints, opts ...httptransport.ServerOption) HTTPHandlers {
 	h := HTTPHandlers{
 		CheckinHandler: httptransport.NewServer(
-			ctx,
 			endpoints.CheckinEndpoint,
 			decodeRequest,
 			encodeResponse,
